@@ -29,4 +29,8 @@ I again used `GridSearchCV` to further tune the parameters to create a better sc
 
 **Random Forest**
 
+I initialized a model using `RandomForestClassifier()` and set the number of trees to 300 (`n_estimators=300`). I then fit and scored the model, with the testing data scoring at 88.2%.
+
+Using Grid Search, I explored different parameters including `n_estimators`, `max_depth`, `min_samples_split`, and `min_samples_leaf`. Again, I used this grid to train a new model, before predicting and scoring. The new model scored at 88.4%, only slightly improved from the original model. 
+
 **Support Vector Machine**
