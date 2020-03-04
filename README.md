@@ -10,7 +10,7 @@ After the data was read in from a csv file, some simple cleaning was done by dro
 
 With my `X` and `y` values set, I then split the data into training and testing sets using `train_test_split` with `stratify=y` to ensure that there was an even distribution of classification values in both data sets. Then, I used `MinMaxScaler` to scale both sets of `X` data. 
 
-To find the best K value to use in this model, I created a loop to run through a set of possible K values. 
+To find the best k value to use in this model, I created a loop to run through a set of possible k values. Because there are three possible classifications, I started the range of k values at 5 with a step of 3 to avoid any even split of classifications. Comparing the training and testing scores of each model, it looked like k=14 was the best value, as it had the lowest difference between training and testing scores, without the testing score being higher than the training (which suggests overfitting).
 
 **Logistic Regression**
 
