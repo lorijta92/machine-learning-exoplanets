@@ -34,3 +34,9 @@ I initialized a model using `RandomForestClassifier()` and set the number of tre
 Using Grid Search, I explored different parameters including `n_estimators`, `max_depth`, `min_samples_split`, and `min_samples_leaf`. Again, I used this grid to train a new model, before predicting and scoring. The new model scored at 88.4%, only slightly improved from the original model. 
 
 **Support Vector Machine**
+
+I initialized the model with `SVC()` and set the kernel to `linear` before training and scoring the model, with the testing data scoring at 81.1%.
+
+With Grid Search, I explored various C values, gamma values, and linear and rbf kernels. After training the new model, accuracy increased to 85.3%.
+
+Grid Search revealed that the best parameters were a linear kernel with C=50. Using these parameters, I initialized a new model to train and predict. This new model had an even greater accuracy of 86%.
