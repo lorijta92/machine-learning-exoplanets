@@ -12,6 +12,7 @@ With my `X` and `y` values set, I split the data into training and testing sets 
 
 This method was used for all four models.
 
+
 **K-Nearest Neighbors**
 
 To find the best k value to use in this model, I created a loop to run through a set of possible k values. Because there are three possible classifications, I started the range of k values at 5 with a step of 3 to avoid any even split of classifications. Comparing the training and testing scores of each model, it looked like k=14 was the best value, as it had the lowest difference between training and testing scores, without the testing score being higher than the training (which suggests overfitting).
@@ -21,6 +22,10 @@ To further tune the model’s parameters, I used `GridSearchCV` and expanded the
 Grid Search also found k=14 to be the best k value, with an accuracy of 88.5%, so this model was not improved by the use of Grid Search.
 
 **Logistic Regression**
+
+I initialized the model using `LogisticRegression()` and fit the model using the training data. I then scored the model using both the training and testing data. Both sets scored fairly well, with the training data at 82.7% and the testing data at 82.4%.
+
+I again used `GridSearchCV` to further tune the parameters to create a better scoring model. The parameters were set to explore different `C` values using both L1 and L2 penalties as regularization methods. I then fit a new model (named `best_model`) using this grid and found the best parameters, before predicting on the test set using `best_model.predict()`. Using the tuned hyperparameters increased the model’s score by 3.9% for a score of 86.3%.
 
 **Random Forest**
 
