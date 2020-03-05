@@ -37,3 +37,7 @@ Using Grid Search, I explored different parameters including `n_estimators`, `ma
 I initialized the model with `SVC()` and set the kernel to `linear` before training and scoring the model, with the testing data scoring at 80.6%.
 
 With Grid Search, I explored various C values, gamma values, and linear and rbf kernels. After training the new model, accuracy increased to 84.2%.
+
+# Summary
+
+Overall, all models scored in the 80% range with the use of Grid Search slightly improving accuracy. Grid Search worked best on the logistic regression and SVM models, increasing accuracy by 3.4% and 3.6% respectively. In terms of best classifying exoplanet candidates, the random forest model was most accurate at 89.1%. 
