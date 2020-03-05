@@ -23,9 +23,11 @@ Grid Search also found k=14 to be the best k value, with an accuracy of 88.5%, s
 
 **Logistic Regression**
 
-I initialized the model using `LogisticRegression()` and fit the model using the training data. I then scored the model using both the training and testing data. Both sets scored fairly well, with the training data at 82.7% and the testing data at 82.4%.
+I initialized the model using `LogisticRegression()` and fit the model using the training data. I then scored the model using both the training and testing data. Both sets scored fairly well, with the training data at 83.4% and the testing data at 83.8%.
 
-I again used `GridSearchCV` to further tune the parameters to create a better scoring model. The parameters were set to explore different `C` values using both L1 and L2 penalties as regularization methods. I then fit a new model (named `best_model`) using this grid and found the best parameters, before predicting on the test set using `best_model.predict()`. Using the tuned hyperparameters increased the model’s score by 3.9% for a score of 86.3%.
+I again used `GridSearchCV` to further tune the parameters to create a better scoring model. The parameters were set to explore different `C` values using both L1 and L2 penalties as regularization methods. I then fit a new model (named `best_model`) using this grid and found the best parameters, before predicting on the test set using `best_model.predict()`. This new model's score was marginally better than the original, scoring at 85.6%. 
+
+To take it one step further, I assigned the best parameters (the best ‘C’ value and penalty) to variables and used those variables to initialize another model. This model had the best score of 85.7%.
 
 **Random Forest**
 
